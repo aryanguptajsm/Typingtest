@@ -12,13 +12,13 @@
     };
     startBtn.addEventListener('click', () => {
       let value = inputField.value.trim();
-       console.dir(value);
+       
        runtime();
-        clearInterval(run);
+        
        startBtn.textContent = "stop";
-      if (value === text) {
+      
          
-      } 
+      
     });
    
     
