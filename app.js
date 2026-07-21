@@ -16,4 +16,4 @@
         resultText.textContent = 'Please enter a value first.';
       }
     });
-    console.log
+    console.log("value");
