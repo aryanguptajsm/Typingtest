@@ -17,7 +17,8 @@
      },10) 
     };
     startBtn.addEventListener('click', () => {
-      text.style.display ="i"
+      text.style.display ="initial";
+      
     });
    
     
