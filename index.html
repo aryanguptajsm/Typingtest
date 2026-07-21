@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern UI</title>
+  <style>
+    /* Modern CSS Reset & Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --dark-gray: #1e1e24;
+      --creamy-white: #fdfbf7;
+      --glass-bg: rgba(253, 251, 247, 0.05);
+      --glass-border: rgba(253, 251, 247, 0.1);
+    }
+
+    body {
+      background-color: var(--dark-gray);
+      color: var(--creamy-white);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Card Container */
+    .ui-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    /* Elements */
+    #text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    #input {
+      background: transparent;
+      color: var(--creamy-white);
+      border: 2px solid var(--glass-border);
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    #input:focus {
+      border-color: var(--creamy-white);
+      background: rgba(253, 251, 247, 0.02);
+    }
+
+    #start {
+      background-color: var(--creamy-white);
+      color: var(--dark-gray);
+      border: none;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    #start:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    #start:active {
+      transform: translateY(1px);
+    }
+
+    #result {
+      min-height: 1.5rem;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ui-card">
+    <p id="text">JavaScript is awesome</p>
+    <input id="input" type="text" placeholder="Type something..." autocomplete="off">
+    <button id="start">Start</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    // Just a quick script to make the UI interactive
+    const startBtn = document.getElementById('start');
+    const inputField = document.getElementById('input');
+    const resultText = document.getElementById('result');
+
+    startBtn.addEventListener('click', () => {
+      const value = inputField.value.trim();
+      if (value) {
+        resultText.textContent = `Action triggered: ${value}`;
+      } else {
+        resultText.textContent = 'Please enter a value first.';
+      }
+    });
+  </script>
+
+</body>
+</html>
