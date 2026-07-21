@@ -85,8 +85,9 @@
 
     #result {
       min-height: 1.5rem;
-      font-size: 0.95rem;
+      font-size: 2rem;
+      gap: 10px;
       opacity: 0.8;
-      font-weight: 500;
+      font-weight: 1000;
     }
   
