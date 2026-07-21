@@ -1,93 +1,125 @@
-   * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* --- style.css --- */
 
-    :root {
-      --dark-gray: #1e1e24;
-      --creamy-white: #fdfbf7;
-      --glass-bg: rgba(253, 251, 247, 0.05);
-      --glass-border: rgba(253, 251, 247, 0.1);
-    }
+/* Base Variables for the Theme */
+:root {
+  --milky-white: #FCFDFD;
+  --light-grey-bg: #F0F2F5;
+  --border-color: #E2E8F0;
+  --text-dark: #334155;
+  --text-light: #64748B;
+  --cool-grey-btn: #475569;
+  --cool-grey-btn-hover: #334155;
+}
 
-    body {
-      background-color: var(--dark-gray);
-      color: var(--creamy-white);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 
-    /* Card Container */
-    .ui-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--glass-border);
-      border-radius: 16px;
-      padding: 2.5rem;
-      width: 100%;
-      max-width: 360px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      text-align: center;
-    }
+body {
+  background-color: rgb(31, 30, 30);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
 
-    /* Elements */
-    #text {
-      display: none;
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-    }
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 
-    #input {
-      background: transparent;
-      color: var(--creamy-white);
-      border: 2px solid var(--glass-border);
-      padding: 14px 16px;
-      border-radius: 10px;
-      font-size: 1rem;
-      outline: none;
-      transition: all 0.3s ease;
-    }
+/* Main UI Card */
+.ui-card {
+  background-color: rgba(1, 242, 255, 0.149);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 
+              0 1px 3px rgba(0, 0, 0, 0.02);
+  text-align: center;
+}
 
-    #input:focus {
-      border-color: var(--creamy-white);
-      background: rgba(253, 251, 247, 0.02);
-    }
+/* Text to Type */
+#text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background-color: var(--light-grey-bg);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+  letter-spacing: 0.5px;
+}
 
-    #start {
-      background-color: var(--creamy-white);
-      color: var(--dark-gray);
-      border: none;
-      padding: 14px 16px;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
+/* Input Field */
+#input {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  background-color: var(--milky-white);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+  text-align: center;
+}
 
-    #start:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
+#input::placeholder {
+  color: #1e1e1e;
+}
 
-    #start:active {
-      transform: translateY(1px);
-    }
+/* Input Focus Effect */
+#input:focus {
+  border-color: var(--cool-grey-btn);
+  box-shadow: 0 0 0 4px rgba(71, 85, 105, 0.1);
+}
 
-    #result {
-      min-height: 1.5rem;
-      font-size: 2rem;
-      gap: 10px;
-      opacity: 0.8;
-      font-weight: 1000;
-    }
-  
+/* Start Button */
+#start {
+  width: 100%;
+  background-color: var(--cool-grey-btn);
+  color: var(--milky-white);
+  border: none;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#start:hover {
+  background-color: var(--cool-grey-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(51, 65, 85, 0.2);
+}
+
+#start:active {
+  transform: translateY(0);
+}
+
+/* Result Text */
+#result {
+  margin-top: 24px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  min-height: 26px; /* Keeps layout from shifting when text appears */
+}
