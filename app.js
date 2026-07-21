@@ -12,13 +12,15 @@
      const correntvalue = inputField.value.trim();
      if(correntvalue === targettext){
         clearInterval(run);
+        startBtn.disabled =false;
 
      }
      },10) 
     };
     startBtn.addEventListener('click', () => {
       text.style.display ="initial";
-      
+      startBtn.disabled =true;
+       runtime();
     });
    
     
