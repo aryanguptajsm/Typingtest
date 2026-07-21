@@ -1,125 +1,138 @@
-/* --- style.css --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* Base Variables for the Theme */
-:root {
-  --milky-white: #FCFDFD;
-  --light-grey-bg: #F0F2F5;
-  --border-color: #E2E8F0;
-  --text-dark: #334155;
-  --text-light: #64748B;
-  --cool-grey-btn: #475569;
-  --cool-grey-btn-hover: #334155;
-}
-
-/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-  background-color: rgb(31, 30, 30);
-  color: var(--text-dark);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
+  gap: 2.5rem;
+  padding: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.25), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(45, 212, 191, 0.2), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.12), transparent 60%),
+    #0a0a12;
+  color: #f1f1f5;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-light);
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-/* Main UI Card */
-.ui-card {
-  background-color: rgba(1, 242, 255, 0.149);
-  width: 100%;
-  max-width: 450px;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 
-              0 1px 3px rgba(0, 0, 0, 0.02);
-  text-align: center;
-}
-
-/* Text to Type */
-#text {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--text-dark);
-  background-color: var(--light-grey-bg);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-  border: 1px solid var(--border-color);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  background: linear-gradient(90deg, #c084fc, #f472b6, #2dd4bf);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
 }
 
-/* Input Field */
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.ui-card {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.ui-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(168, 85, 247, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+#text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  color: #d8d8e6;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 #input {
   width: 100%;
-  padding: 16px;
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  background-color: var(--milky-white);
-  border: 2px solid var(--border-color);
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #f1f1f5;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   outline: none;
-  transition: all 0.3s ease;
-  margin-bottom: 24px;
-  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 #input::placeholder {
-  color: #1e1e1e;
+  color: rgba(241, 241, 245, 0.35);
 }
 
-/* Input Focus Effect */
 #input:focus {
-  border-color: var(--cool-grey-btn);
-  box-shadow: 0 0 0 4px rgba(71, 85, 105, 0.1);
+  border-color: rgba(192, 132, 252, 0.6);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.12);
 }
 
-/* Start Button */
 #start {
-  width: 100%;
-  background-color: var(--cool-grey-btn);
-  color: var(--milky-white);
-  border: none;
-  padding: 16px;
-  font-size: 1.1rem;
+  padding: 0.75rem 2.2rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.3px;
+  color: #0a0a12;
+  background: linear-gradient(90deg, #c084fc, #f472b6);
+  border: none;
+  border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 #start:hover {
-  background-color: var(--cool-grey-btn-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(51, 65, 85, 0.2);
+  filter: brightness(1.08);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.35);
 }
 
 #start:active {
   transform: translateY(0);
 }
 
-/* Result Text */
 #result {
-  margin-top: 24px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-dark);
-  min-height: 26px; /* Keeps layout from shifting when text appears */
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  color: #2dd4bf;
+  min-height: 1.3rem;
+  text-align: center;
 }
