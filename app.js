@@ -13,9 +13,9 @@
          time++;
          resultText.textContent = (time / 100).toFixed(2);
         //
-     const correntvalue = inputField.value.trim();
+     const currentvalue = inputField.value.trim();
      //
-     if(correntvalue === targettext){
+     if(currentvalue === targettext){
         clearInterval(run);
         startBtn.disabled =false;
         startBtn.textContent ="restart";
