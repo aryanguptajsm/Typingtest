@@ -5,20 +5,19 @@
     let run;
      function runtime(){
        let time = 0;
+       const targettext = text.textContent.trim();
      run = setInterval(()=>{
          time++;
          resultText.textContent = (time / 100).toFixed(2);
+     const correntvalue = inputField.value.trim();
+     if(correntvalue === targettext){
+        clearInterval(run);
+
+     }
      },10) 
     };
     startBtn.addEventListener('click', () => {
-      let value = inputField.value.trim();
-       
-       runtime();
-        
-       startBtn.textContent = "stop";
-      
-         
-      
+      text.style.display ="i"
     });
    
     
