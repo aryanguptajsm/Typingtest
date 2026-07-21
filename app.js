@@ -19,6 +19,7 @@
         clearInterval(run);
         startBtn.disabled =false;
         startBtn.textContent ="restart";
+      
      //
      }
      },10) 
@@ -28,7 +29,8 @@
       startBtn.disabled =true;
        runtime();
        if(inputField.value.trim() !== ""){
-        
+        inputField.value = ""
+          startBtn.textContent ="start";
        }
     });
    
