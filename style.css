@@ -69,6 +69,7 @@ h1 {
 }
 
 #text {
+  display: none;
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
