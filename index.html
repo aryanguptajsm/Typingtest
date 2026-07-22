@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>typing tester</title>
-   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
 </head>
 <body>
-   <h1>click on start to test typing speed</h1>
-  <div class="ui-card">
-    <p id="text">JavaScript is awesome</p>
-    <input id="input" type="text" placeholder="Type something..." autocomplete="off">
-    <button id="start">Start</button>
-    <p id="result"></p>
-  </div>
-<script src="app.js"></script>
+
+    <div class="container">
+
+        <h1>Typing Speed Test</h1>
+
+        <p id="text">
+            JavaScript is awesome and I want to become a JavaScript Master.
+        </p>
+
+        <textarea
+            id="input"
+            rows="6"
+            placeholder="Start typing here..."
+        ></textarea>
+
+        <div class="info">
+
+            <p>
+                ⏱ Time:
+                <span id="time">0.00</span> sec
+            </p>
+
+            <p>
+                🎯 Accuracy:
+                <span id="accuracy">100%</span>
+            </p>
+
+            <p>
+                ⌨ Characters:
+                <span id="characters">0</span>
+            </p>
+
+        </div>
+
+        <button id="start">Start</button>
+        <button id="restart">Restart</button>
+
+        <h2 id="result"></h2>
+
+    </div>
+
 </body>
 </html>
