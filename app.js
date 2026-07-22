@@ -1,4 +1,4 @@
-   const startBtn = document.getElementById('start');
+   const startBtn = document.querySelector("#start");
     const inputField = document.getElementById('input');
     const resultText = document.getElementById('result');
     const text = document.querySelector("#text");
