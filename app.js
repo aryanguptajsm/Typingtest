@@ -1,7 +1,7 @@
    const startBtn = document.getElementById('start');
     const inputField = document.getElementById('input');
     const resultText = document.getElementById('result');
-    const text = document.getElementById("text");
+    const text = document.querySelector("#text");
     let run;
 
      function runtime(){
