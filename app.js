@@ -18,7 +18,6 @@
      if(currentvalue === targettext){
         clearInterval(run);
         startBtn.disabled =false;
-        startBtn.textContent ="restart";
       
      //
      }
