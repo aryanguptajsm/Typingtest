@@ -12,15 +12,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
   padding: 2rem;
   font-family: 'Space Grotesk', sans-serif;
   background:
-    radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.25), transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(45, 212, 191, 0.2), transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.12), transparent 60%),
-    #0a0a12;
-  color: #f1f1f5;
+    radial-gradient(circle at 10% 10%, rgba(34, 211, 238, 0.14), transparent 34%),
+    radial-gradient(circle at 90% 90%, rgba(251, 146, 60, 0.12), transparent 38%),
+    #101418;
+  color: #edf7f5;
   overflow-x: hidden;
 }
 
@@ -29,7 +28,7 @@ h1 {
   font-weight: 600;
   letter-spacing: 0.3px;
   text-align: center;
-  background: linear-gradient(90deg, #c084fc, #f472b6, #2dd4bf);
+  background: linear-gradient(90deg, #67e8f9, #fbbf24, #fb923c);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -42,17 +41,17 @@ h1 {
   50% { background-position: 100% center; }
 }
 
-.ui-card {
+.container {
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.4rem;
-  padding: 2.5rem 2rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 1.2rem;
+  padding: 2.25rem 2rem;
+  border-radius: 16px;
+  background: rgba(21, 29, 33, 0.9);
+  border: 1px solid rgba(103, 232, 249, 0.16);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow:
@@ -61,10 +60,10 @@ h1 {
   transition: box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-.ui-card:hover {
+.container:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 12px 40px rgba(168, 85, 247, 0.15),
+    0 12px 40px rgba(34, 211, 238, 0.12),
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
@@ -73,13 +72,13 @@ h1 {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
-  color: #d8d8e6;
+  color: #d6e7e5;
   text-align: center;
   padding: 1rem 1.2rem;
   width: 100%;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(8, 13, 15, 0.55);
+  border: 1px solid rgba(103, 232, 249, 0.12);
 }
 
 #input {
@@ -87,22 +86,22 @@ h1 {
   padding: 0.85rem 1.1rem;
   font-size: 1rem;
   font-family: 'JetBrains Mono', monospace;
-  color: #f1f1f5;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #edf7f5;
+  background: rgba(8, 13, 15, 0.65);
+  border: 1px solid rgba(103, 232, 249, 0.18);
   border-radius: 12px;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 #input::placeholder {
-  color: rgba(241, 241, 245, 0.35);
+  color: rgba(237, 247, 245, 0.38);
 }
 
 #input:focus {
-  border-color: rgba(192, 132, 252, 0.6);
-  background: rgba(255, 255, 255, 0.07);
-  box-shadow: 0 0 0 4px rgba(192, 132, 252, 0.12);
+  border-color: rgba(103, 232, 249, 0.75);
+  background: rgba(8, 13, 15, 0.85);
+  box-shadow: 0 0 0 4px rgba(103, 232, 249, 0.12);
 }
 
 #start {
@@ -111,8 +110,8 @@ h1 {
   font-weight: 600;
   font-family: 'Space Grotesk', sans-serif;
   letter-spacing: 0.3px;
-  color: #0a0a12;
-  background: linear-gradient(90deg, #c084fc, #f472b6);
+  color: #101418;
+  background: linear-gradient(90deg, #67e8f9, #fbbf24);
   border: none;
   border-radius: 999px;
   cursor: pointer;
@@ -122,7 +121,7 @@ h1 {
 #start:hover {
   transform: translateY(-2px);
   filter: brightness(1.08);
-  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.35);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.3);
 }
 
 #start:active {
@@ -132,7 +131,55 @@ h1 {
 #result {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.95rem;
-  color: #2dd4bf;
+  color: #67e8f9;
   min-height: 1.3rem;
   text-align: center;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: #91aaa8;
+  font-size: 0.82rem;
+}
+
+.info span {
+  color: #fbbf24;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+
+#restart {
+  padding: 0.65rem 1.5rem;
+  font: 500 0.9rem 'Space Grotesk', sans-serif;
+  color: #b9ccca;
+  background: transparent;
+  border: 1px solid rgba(103, 232, 249, 0.25);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+#restart:hover {
+  color: #101418;
+  background: #67e8f9;
+  border-color: #67e8f9;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.75rem 1rem;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
 }
