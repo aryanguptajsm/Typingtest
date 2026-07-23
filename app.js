@@ -1,39 +1,43 @@
-  const con = document.querySelector(".container")
- const info = container.querySelector(".info")
-const startBtn = info.querySelector("#start");
-    const inputField = document.getElementById('input');
-    const resultText = document.getElementById('result');
-    const text = document.querySelector("#text");
-    let run;
+const con = document.querySelector(".container");
+const inf = con.querySelector(".info");
 
-     function runtime(){
-       let time = 0;
-       //
-       const targettext = text.textContent.trim();
-       //
-     run = setInterval(()=>{
-         time++;
-         resultText.textContent = (time / 100).toFixed(2);
-        //
-     const currentvalue = inputField.value.trim();
-     //
-     if(currentvalue === targettext){
-        clearInterval(run);
-        startBtn.disabled =false;
-      
-     //
-     }
-     },10) 
-    };
-    startBtn.addEventListener('click', () => {
-      text.style.display ="initial";
-      startBtn.disabled =true;
-       runtime();
-       if(inputField.value.trim() !== ""){
-        inputField.value = ""
-          startBtn.textContent ="start";
-       }
-    });
-   
-    
-   
+const startBtn = con.querySelector("#start");
+const inputField = con.querySelector("#input");
+const resultText = con.querySelector("#result");
+const text = con.querySelector("#text");
+
+let run;
+
+function runtime() {
+    clearInterval(run);
+
+    let time = 0;
+    const targetText = text.textContent.trim();
+
+    run = setInterval(() => {
+        time++;
+        resultText.textContent = (time / 100).toFixed(2);
+
+        const currentValue = inputField.value.trim();
+
+        if (currentValue === targetText) {
+            clearInterval(run);
+            startBtn.disabled = false;
+            startBtn.textContent = "Start";
+        }
+    }, 10);
+}
+
+startBtn.addEventListener("click", () => {
+    clearInterval(run);
+    text.style.display
+    inputField.value = "";
+    inputField.focus();
+
+    resultText.textContent = "0.00";
+
+    startBtn.disabled = true;
+    startBtn.textContent = "Running...";
+
+    runtime();
+});
