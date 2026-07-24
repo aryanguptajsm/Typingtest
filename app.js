@@ -8,7 +8,7 @@ const text = con.querySelector("#text");
 const times = inf.querySelector("#time");
 const cha = inf.querySelector("#characters");
 const restart = con.querySelector("#restart")
-const acc = info.querySelector("#accuracy");
+let acc = inf.querySelector("#accuracy");
 
 let run;
 
@@ -16,22 +16,32 @@ function runtime() {
     clearInterval(run);
 
     let time = 0;
-    const targetText = text.textContent.trim();
+    const targetText = [text.textContent.trim()];
 
     run = setInterval(() => {
         time++;
        resultText.textContent = (time / 100).toFixed(2);
         times.textContent = resultText.textContent;
-        const currentValue = inputField.value.trim();
-
-        if (currentValue === targetText) {
+        const currentValue = [inputField.value.trim()];
+     for(let i = 0; i >= targetText.length ; i++){
+        if (currentValue[i] === targetText[i]) {
             clearInterval(run);
             startBtn.disabled = false;
             startBtn.textContent = "Start";
-        }
+        }};
     }, 10);
 }
-
+function accracy(){
+    const targettype = text.textContent;
+    const typed = input.value.trim();
+    let correct = 0;
+    for (let i = 0; i < typed.length; i++) {
+  if(targettype[i] === typed[i]){
+    correct++;
+  }
+};
+     acc = (correct / typed.length)* 100;
+};
 startBtn.addEventListener("click", () => {
     clearInterval(run);
     text.style.display = "block";
@@ -44,4 +54,5 @@ startBtn.addEventListener("click", () => {
     startBtn.textContent = "Running...";
 
     runtime();
+    accracy();
 });
