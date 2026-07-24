@@ -36,18 +36,16 @@ function runtime() {
         accuracy();
 
         // Stop when sentence is complete
-        if (currentValue === targetText) {
-            clearInterval(run);
+    
+   if (
+    currentValue.length === targetText.length 
+   
+   ) {
+    clearInterval(run);
 
-            startBtn.disabled = false;
-            startBtn.textContent = "Restart";
-
-            inputField.disabled = true;
-
-            resultText.textContent =
-                `Completed in ${seconds} seconds`;
-        }
-
+    startBtn.disabled = false;
+    startBtn.textContent = "Done";
+    }
     }, 10);
 }
 
