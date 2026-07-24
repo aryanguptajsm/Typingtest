@@ -5,7 +5,7 @@ const startBtn = con.querySelector("#start");
 const inputField = con.querySelector("#input");
 const resultText = con.querySelector("#result");
 const text = con.querySelector("#text");
-const time = inf.querySelector("")
+const times = inf.querySelector("#time")
 
 let run;
 
@@ -17,8 +17,8 @@ function runtime() {
 
     run = setInterval(() => {
         time++;
-        resultText.textContent = (time / 100).toFixed(2);
-        time.textContent = resultText.textContent;
+       resultText.textContent = (time / 100).toFixed(2);
+        times.textContent = resultText.textContent;
         const currentValue = inputField.value.trim();
 
         if (currentValue === targetText) {
