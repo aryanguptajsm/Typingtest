@@ -5,6 +5,7 @@ const startBtn = con.querySelector("#start");
 const inputField = con.querySelector("#input");
 const resultText = con.querySelector("#result");
 const text = con.querySelector("#text");
+const time = inf.querySelector("")
 
 let run;
 
@@ -17,7 +18,7 @@ function runtime() {
     run = setInterval(() => {
         time++;
         resultText.textContent = (time / 100).toFixed(2);
-
+        time.textContent = resultText.textContent;
         const currentValue = inputField.value.trim();
 
         if (currentValue === targetText) {
@@ -30,7 +31,7 @@ function runtime() {
 
 startBtn.addEventListener("click", () => {
     clearInterval(run);
-    text.style.display
+    text.style.display = "block";
     inputField.value = "";
     inputField.focus();
 
