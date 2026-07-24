@@ -44,9 +44,8 @@ function accracy(){
     acc.textContent = "100%";
     return;
 }
-else {
-     acc.textContent = accuracy.toFixed(2) + "%";
-};
+
+     
 };
 inputField.addEventListener("input", () => {
    accracy();
