@@ -5,62 +5,93 @@ const startBtn = con.querySelector("#start");
 const inputField = con.querySelector("#input");
 const resultText = con.querySelector("#result");
 const text = con.querySelector("#text");
+
 const times = inf.querySelector("#time");
 const cha = inf.querySelector("#characters");
-const restart = con.querySelector("#restart")
-let acc = inf.querySelector("#accuracy");
+const restart = con.querySelector("#restart");
+const acc = inf.querySelector("#accuracy");
 
-let run;
+let run = null;
 
 function runtime() {
     clearInterval(run);
 
     let time = 0;
     const targetText = text.textContent.trim();
-
+   
     run = setInterval(() => {
         time++;
-       resultText.textContent = (time / 100).toFixed(2);
-        times.textContent = resultText.textContent;
+
+        const seconds = (time / 100).toFixed(2);
+
+        resultText.textContent = seconds;
+        times.textContent = seconds;
+
         const currentValue = inputField.value.trim();
-     for(let i = 0; i <= targetText.length ; i++){
+
+        // Character count
+        cha.textContent = currentValue.length;
+
+        // Accuracy
+        accuracy();
+
+        // Stop when sentence is complete
         if (currentValue === targetText) {
             clearInterval(run);
+
             startBtn.disabled = false;
-            startBtn.textContent = "Start";
-        }};
+            startBtn.textContent = "Restart";
+
+            inputField.disabled = true;
+
+            resultText.textContent =
+                `Completed in ${seconds} seconds`;
+        }
+
     }, 10);
 }
-function accracy(){
-    const targettype = text.textContent;
+
+function accuracy() {
+    const target = text.textContent.trim();
     const typed = inputField.value.trim();
+
+    if (typed.length === 0) {
+        acc.textContent = "100%";
+        return;
+    }
+
     let correct = 0;
+
     for (let i = 0; i < typed.length; i++) {
-  if(targettype[i] === typed[i]){
-    correct++;
-  }
-};
-     if (typed.length === 0) {
-    acc.textContent = "100%";
-    return;
+        if (typed[i] === target[i]) {
+            correct++;
+        }
+    }
+
+    const percentage = (correct / typed.length) * 100;
+
+    acc.textContent = percentage.toFixed(2) + "%";
 }
 
-     
-};
-inputField.addEventListener("input", () => {
-   accracy();
-});
 startBtn.addEventListener("click", () => {
+
     clearInterval(run);
-    text.style.display = "block";
+    text.style.display ="initial";
+    inputField.disabled = false;
     inputField.value = "";
     inputField.focus();
 
+    cha.textContent = "0";
+    acc.textContent = "100%";
     resultText.textContent = "0.00";
+    times.textContent = "0.00";
 
     startBtn.disabled = true;
     startBtn.textContent = "Running...";
 
     runtime();
-    accracy();
+});
+
+restart.addEventListener("click", () => {
+    startBtn.click();
 });
