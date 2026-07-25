@@ -35,7 +35,7 @@ function runtime() {
         // -----------------------//
         accuracy();
 
-        // Stop when sentence is complete
+        // ----------------------- //
     
    if (
     currentValue.length === targetText.length 
