@@ -68,7 +68,7 @@ function accuracy() {
 
     const percentage = (correct / typed.length) * 100;
 
-    acc.textContent = percentage.toFixed(2) + "%";
+    acc.textContent = percentage.toFixed(2) ;
 }
 
 startBtn.addEventListener("click", () => {
