@@ -29,13 +29,9 @@ function runtime() {
 
         const currentValue = inputField.value.trim();
 
-        // ---------------------//
         cha.textContent = currentValue.length;
-
-        // -----------------------//
+        
         accuracy();
-
-        // ----------------------- //
     
    if (
     currentValue.length === targetText.length 
