@@ -29,10 +29,10 @@ function runtime() {
 
         const currentValue = inputField.value.trim();
 
-        // Character count
+        // ---------------------//
         cha.textContent = currentValue.length;
 
-        // Accuracy
+        // -----------------------//
         accuracy();
 
         // Stop when sentence is complete
