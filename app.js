@@ -7,7 +7,7 @@ const resultText = con.querySelector("#result");
 const text = con.querySelector("#text");
 
 const times = inf.querySelector("#time");
-const cha = inf.querySelector("#characters");
+const character = inf.querySelector("#characters");
 const restart = con.querySelector("#restart");
 const acc = inf.querySelector("#accuracy");
 
