@@ -9,7 +9,7 @@ const text = con.querySelector("#text");
 const times = inf.querySelector("#time");
 const character = inf.querySelector("#characters");
 const restart = con.querySelector("#restart");
-const acc = inf.querySelector("#accuracy");
+const accurace = inf.querySelector("#accuracy");
 
 let run = null;
 
