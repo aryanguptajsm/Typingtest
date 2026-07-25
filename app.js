@@ -29,7 +29,7 @@ function runtime() {
 
         const currentValue = inputField.value.trim();
 
-        cha.textContent = currentValue.length;
+        character.textContent = currentValue.length;
         
         accuracy();
     
@@ -75,7 +75,7 @@ startBtn.addEventListener("click", () => {
     inputField.value = "";
     inputField.focus();
 
-    cha.textContent = "0";
+    character.textContent = "0";
     acc.textContent = "100%";
     resultText.textContent = "0.00";
     times.textContent = "0.00";
