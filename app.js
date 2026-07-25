@@ -50,7 +50,7 @@ function accuracy() {
     const typed = inputField.value.trim();
 
     if (typed.length === 0) {
-        acc.textContent = "100%";
+        accurace.textContent = "100%";
         return;
     }
 
@@ -76,7 +76,7 @@ startBtn.addEventListener("click", () => {
     inputField.focus();
 
     character.textContent = "0";
-    acc.textContent = "100%";
+    accurace.textContent = "100%";
     resultText.textContent = "0.00";
     times.textContent = "0.00";
 
