@@ -10,3 +10,15 @@ const times = inf.querySelector("#time");
 const character = inf.querySelector("#characters");
 const restart = con.querySelector("#restart");
 const accurace = inf.querySelector("#accuracy");
+let run = null;
+
+function runtime() {
+    clearInterval(run);
+
+    let time = 0;
+    const targetText = text.textContent.trim();
+   
+    run = setInterval(() => {
+        time++;
+
+
