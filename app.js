@@ -71,9 +71,11 @@ function wpm(){
      const character = inputField.value.trim();
 
     if(typed !== ""){
-    }
-    character.length / 60;
+    let wm =   character.length / 60;
     
+
+    }
+
 }
 startBtn.addEventListener("click", () => {
 
