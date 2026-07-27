@@ -64,6 +64,7 @@ function accuracy() {
     const percentage = (correct / typed.length) * 100;
 
     accurace.textContent = percentage.toFixed(2) ;
+    wpm();
 }
 function wpm(){
     const target = text.textContent.trim();
@@ -72,7 +73,7 @@ function wpm(){
 
     if(typed !== ""){
     let wm =   character.length / 60;
-    
+    wpms.textContent = wm;
 
     }
 
