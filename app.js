@@ -66,7 +66,9 @@ function accuracy() {
     acc.textContent = percentage.toFixed(2) ;
 }
 function wpm(){
-
+    const target = text.textContent.trim();
+    const typed = inputField.value.trim();
+    
 }
 startBtn.addEventListener("click", () => {
 
