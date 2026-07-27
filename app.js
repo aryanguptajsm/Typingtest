@@ -10,6 +10,7 @@ const times = inf.querySelector("#time");
 const character = inf.querySelector("#characters");
 const restart = con.querySelector("#restart");
 const accurace = inf.querySelector("#accuracy");
+const wpms = inf.querySelector("#wpm")
 let run = null;
 
 function runtime() {
@@ -65,7 +66,7 @@ function accuracy() {
     acc.textContent = percentage.toFixed(2) ;
 }
 function wpm(){
-    
+
 }
 startBtn.addEventListener("click", () => {
 
