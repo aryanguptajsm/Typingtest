@@ -28,7 +28,7 @@ function runtime() {
 
         const currentValue = inputField.value.trim();
 
-        character.textContent = currentValue.length;
+        
         
         accuracy();
     
@@ -63,7 +63,7 @@ function accuracy() {
 
     const percentage = (correct / typed.length) * 100;
 
-    acc.textContent = percentage.toFixed(2) ;
+    accurace.textContent = percentage.toFixed(2) ;
 }
 function wpm(){
     const target = text.textContent.trim();
@@ -78,7 +78,6 @@ startBtn.addEventListener("click", () => {
     inputField.value = "";
     inputField.focus();
 
-    character.textContent = "0";
     accurace.textContent = "100%";
     resultText.textContent = "0.00";
     times.textContent = "0.00";
