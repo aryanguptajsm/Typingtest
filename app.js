@@ -64,7 +64,9 @@ function accuracy() {
 
     acc.textContent = percentage.toFixed(2) ;
 }
-
+function wpm(){
+    
+}
 startBtn.addEventListener("click", () => {
 
     clearInterval(run);
