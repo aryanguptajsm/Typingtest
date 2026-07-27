@@ -1,159 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f5f5f5;
-    padding: 20px;
-}
-
-.container {
-    width: 100%;
-    max-width: 700px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 211, 238, 0.14), transparent 34%),
+    radial-gradient(circle at 90% 90%, rgba(251, 146, 60, 0.12), transparent 38%),
+    #101418;
+  color: #edf7f5;
+  overflow-x: hidden;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #222;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  background: linear-gradient(90deg, #67e8f9, #fbbf24, #fb923c);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 2.25rem 2rem;
+  border-radius: 16px;
+  background: rgba(21, 29, 33, 0.9);
+  border: 1px solid rgba(103, 232, 249, 0.16);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(34, 211, 238, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 #text {
-    background: #f0f0f0;
-    padding: 15px;
-    border-radius: 10px;
-    line-height: 1.8;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #333;
-    letter-spacing: 1px;
+  display: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  color: #d6e7e5;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(8, 13, 15, 0.55);
+  border: 1px solid rgba(103, 232, 249, 0.12);
 }
 
 #input {
-    width: 100%;
-    height: 150px;
-    resize: none;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 17px;
-    outline: none;
-    transition: .3s;
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #edf7f5;
+  background: rgba(8, 13, 15, 0.65);
+  border: 1px solid rgba(103, 232, 249, 0.18);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+#input::placeholder {
+  color: rgba(237, 247, 245, 0.38);
 }
 
 #input:focus {
-    border-color: #007bff;
-}
-
-.info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 25px 0;
-}
-
-.info p {
-    background: #f8f8f8;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.info span {
-    color: #007bff;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 12px 28px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: .3s;
+  border-color: rgba(103, 232, 249, 0.75);
+  background: rgba(8, 13, 15, 0.85);
+  box-shadow: 0 0 0 4px rgba(103, 232, 249, 0.12);
 }
 
 #start {
-    background: #28a745;
-    color: white;
+  padding: 0.75rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.3px;
+  color: #101418;
+  background: linear-gradient(90deg, #67e8f9, #fbbf24);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
-#restart {
-    background: #dc3545;
-    color: white;
+#start:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.3);
 }
 
-button:hover {
-    transform: translateY(-2px);
-}
-
-button:disabled {
-    opacity: .6;
-    cursor: not-allowed;
+#start:active {
+  transform: translateY(0);
 }
 
 #result {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    color: #333;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.95rem;
+  color: #67e8f9;
+  min-height: 1.3rem;
+  text-align: center;
 }
 
-/* --- NEW CLASSES FOR TEXT HIGHLIGHTING --- */
-
-#text span {
-    transition: 0.1s;
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: #91aaa8;
+  font-size: 0.82rem;
 }
 
-/* When the user types the letter correctly (Faded Grey) */
-.correct {
-    color: #aaa; 
+.info span {
+  color: #fbbf24;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
 }
 
-/* When the user makes a mistake (Red) */
-.incorrect {
-    color: #dc3545;
-    background: #ffdce0;
-    border-radius: 3px;
+#restart {
+  padding: 0.65rem 1.5rem;
+  font: 500 0.9rem 'Space Grotesk', sans-serif;
+  color: #b9ccca;
+  background: transparent;
+  border: 1px solid rgba(103, 232, 249, 0.25);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
-/* The exact letter the user is currently on (Yellow Underline) */
-.current {
-    border-bottom: 3px solid #ffc107;
-    background: rgba(255, 193, 7, 0.2);
-    border-radius: 2px;
+#restart:hover {
+  color: #101418;
+  background: #67e8f9;
+  border-color: #67e8f9;
 }
 
-@media(max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
-    .info {
-        grid-template-columns: 1fr;
-    }
-    .buttons {
-        flex-direction: column;
-    }
-    button {
-        width: 100%;
-    }
+@media (max-width: 520px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.75rem 1rem;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
 }
