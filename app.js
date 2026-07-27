@@ -68,7 +68,11 @@ function accuracy() {
 function wpm(){
     const target = text.textContent.trim();
     const typed = inputField.value.trim();
-    if()
+     const character = inputField.value.trim();
+
+    if(typed !== ""){
+    }
+    character.length / 60;
     
 }
 startBtn.addEventListener("click", () => {
