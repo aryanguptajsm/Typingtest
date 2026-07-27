@@ -68,6 +68,7 @@ function accuracy() {
 function wpm(){
     const target = text.textContent.trim();
     const typed = inputField.value.trim();
+    if()
     
 }
 startBtn.addEventListener("click", () => {
