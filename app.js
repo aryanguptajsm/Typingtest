@@ -77,7 +77,7 @@ function wpm() {
     if (elapsedTime === 0) {
         wpms.textContent = "0";
         return;
-    }
+    }n en k
 
     const minutes = (elapsedTime / 100) / 60;
 
