@@ -103,10 +103,4 @@ startBtn.addEventListener("click", () => {
     times.textContent = "0.00";
 
     startBtn.disabled = true;
-    startBtn.textContent = "Running...";
-
-    runtime();
-});
-
-restart.addEventListener("click", () => {
-    startBtn.c
+    start
