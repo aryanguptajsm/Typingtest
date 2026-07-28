@@ -77,7 +77,7 @@ function wpm() {
     if (elapsedTime === 0) {
         wpms.textContent = "0";
         return;
-    }n en k
+    }
 
     const minutes = (elapsedTime / 100) / 60;
 
@@ -85,7 +85,7 @@ function wpm() {
 
     wpms.textContent = Math.round(speed);
 }
-nfjenkj
+
 startBtn.addEventListener("click", () => {
 
     clearInterval(run);
