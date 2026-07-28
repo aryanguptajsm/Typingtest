@@ -94,13 +94,24 @@ startBtn.addEventListener("click", () => {
 
     inputField.disabled = false;
     inputField.value = "";
-    inputField.focus();
+][
 
-    character.textContent = "0";
-    accurace.textContent = "100%";
-    wpms.textContent = "0";
+]   inputField.focus();
+
+    ljaracter.textContent = "0";
+    ac;.race.textContent = "100%";
+    wpms
+    
+    .textContent = "0";
     resultText.textContent = "0.00";
     times.textContent = "0.00";
 
     startBtn.disabled = true;
-    start
+    startBtn.textContent = "Running...";
+
+    runtime();
+});
+
+restart.addEventListener("click", () => {
+    startBtn.click();
+})tr
