@@ -113,4 +113,4 @@ startBtn.addEventListener("click", () => {
 
 restart.addEventListener("click", () => {
     startBtn.click();
-})tr
+});
