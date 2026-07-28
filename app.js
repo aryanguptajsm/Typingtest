@@ -85,7 +85,7 @@ function wpm() {
 
     wpms.textContent = Math.round(speed);
 }
-
+nfjenkj
 startBtn.addEventListener("click", () => {
 
     clearInterval(run);
