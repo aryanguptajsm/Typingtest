@@ -98,10 +98,8 @@ startBtn.addEventListener("click", () => {
                       
 
     ljaracter.textContent = "0";
-    ac;.race.textContent = "100%";
-    wpms
-    v
-    .textContent = "0";
+    accrace.textContent = "100%";
+    wpmu.textContent = "0";
     resultText.textContent = "0.00";
     times.textContent = "0.00";
 
