@@ -71,19 +71,18 @@ function accuracy() {
 }
 
 function wpm() {
-
     const chars = inputField.value.length;
 
     if (elapsedTime === 0) {
         wpms.textContent = "0";
         return;
     }
-    
-    const minutes = (elapsedTime / 60) * chars.value;
 
-   const speed = (chars / 5) / minutes;   
+    const minutes = elapsedTime / 60;
 
-    wpms.textContent = (speed).toFixed(0);
+    const speed = (chars / 5) / minutes;
+
+    wpms.textContent = Math.round(speed);
 }
 
 startBtn.addEventListener("click", () => {
