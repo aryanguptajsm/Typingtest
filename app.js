@@ -79,11 +79,11 @@ function wpm() {
         return;
     }
 
-    const minutes = (elapsedTime / 100) / 60;
+    const minutes = (elapsedTime / 60);
 
     const speed = (chars / 5) / minutes;
 
-    wpms.textContent = (speed).toFixed(2);
+    wpms.textContent = (speed).toFixed(0);
 }
 
 startBtn.addEventListener("click", () => {
