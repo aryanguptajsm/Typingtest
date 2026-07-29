@@ -97,7 +97,7 @@ startBtn.addEventListener("click", () => {
 
                       
 
-    ljaracter.textContent = "0";
+    character.textContent = "0";
     accrace.textContent = "100%";
     wpmu.textContent = "0";
     resultText.textContent = "0.00";
