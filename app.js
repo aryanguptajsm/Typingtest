@@ -78,10 +78,10 @@ function wpm() {
         wpms.textContent = "0";
         return;
     }
+    
+    const minutes = (elapsedTime / 60) * chars.value;
 
-    const minutes = (elapsedTime / 60);
-
-    const speed = (chars / 5) / minutes;
+   const speed = (chars / 5) / minutes;   
 
     wpms.textContent = (speed).toFixed(0);
 }
