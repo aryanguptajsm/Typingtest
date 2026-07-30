@@ -82,7 +82,7 @@ function wpm() {
 
     const speed = (chars / 5) / minutes;
 
-    wpms.textCotent = Math.round(speed);
+    wpms.textContent = Math.round(speed);
 }
 
 startBtn.addEventListener("click", () => {
