@@ -24,9 +24,7 @@ function runtime() {
     run = setInterval(() => {
         elapsedTime++;
 
-        const minutes = elapsedTime / 6000;
-
-        const seconds = (elapsedTime / minutes).toFixed(2);
+        const seconds = (elapsedTime / 100).toFixed(2);
 
         resultText.textContent = seconds;
         times.textContent = seconds;
