@@ -78,7 +78,7 @@ function wpm() {
         return;
     }
 
-    const minutes = elapsedTime / 60;
+    const minutes = elapsedTime / 6000;
 
     const speed = (chars / 5) / minutes;
 
